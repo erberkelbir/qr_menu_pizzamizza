@@ -1,0 +1,162 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Add a nice font */
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #f0f0f0;
+}
+
+/* Add animation to the header */
+header {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  animation: fadein 1s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.container{
+  margin-top: 3%;
+}
+
+/* Add animation to the cards */
+.card {
+  padding: 3% 5%;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Add a hover effect to the buttons */
+.buton {
+  height: 40px;
+  min-width: 120px;
+  transition: background-color 0.3s ease;
+  color: #fff;
+  background-color: #832f38;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: normal;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.buton:hover {
+  background-color: #b86767;
+}
+
+.buton:focus {
+  outline: none;
+}
+
+.buton:active {
+  transform: scale(0.95);
+}
+.section-border {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f7f7f7;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+/* Add a nice background color to the cart */
+.cart {
+  flex-flow: column;
+  align-items: center;
+  padding: 20px;
+  min-height: auto;
+  border-radius: 10px;
+  border: 1px solid #f1efef;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the cart items */
+#cart-items {
+
+  list-style: none;
+  padding: 0;
+
+}
+
+#cart-items li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #e9e8e8;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+/* Style the "Place Order" button */
+#place-order {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#place-order:hover {
+  background-color: #c82333;
+}
+
+#place-order:active {
+  transform: scale(0.95);
+}
+.footer-logo{
+  margin: 3% 1%;
+}
+.footer{
+  padding-top: 30px;
+  margin-top: 3%;
+  text-align: center;
+}
+
+.total-price{
+  font-size: 18px;
+  padding: 1% 1%;
+}
+
+.img-fluid {
+  width: 250px;
+  height: 250px;
+  margin-bottom: -50px;
+  /* Retain the scale property */
+  /* Add rotation animation */
+  animation: rotation 2s ease-out 1;
+}
+
+/* Define the cycle for the rotation animation */
+@keyframes rotation {
+  0% { transform: rotate(0deg) scale(0.5); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
