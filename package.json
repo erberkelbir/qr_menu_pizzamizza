@@ -1,0 +1,19 @@
+{
+  "name": "qr_menu_pizza",
+  "version": "1.0.0",
+  "description": "A qr web menu for pizza restaurant",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Erberk ELBİR",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.9",
+    "expess": "^0.0.1-security",
+    "express": "^4.18.2",
+    "nodemon": "^3.0.1",
+    "twilio": "^4.13.0"
+  }
+}
