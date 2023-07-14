@@ -11,12 +11,19 @@ $(document).ready(function() {
     var totalPriceElement = $('.total-price');
     var previousTotal = Number(totalPriceElement.text().replace(/[^0-9.-]+/g,"")); // Removes "Total: $" and formats as Number
     var newTotal = previousTotal + priceAsNumber;
-    totalPriceElement.text('Total: $' + newTotal.toFixed(2));
+    totalPriceElement.text('Total:' + newTotal.toFixed(2));
 
     // Create a new cart item element
     var cartItem = $("<li>").addClass("mb-2").text(pizzaName + " - " + pizzaPrice);
     // Add a remove button next to the cart item
-    var removeButton = $("<button>").addClass("btn btn-danger btn-sm ml-2 remove-item").text("Remove");
+    const currentURL = window.location.href;
+    if (currentURL.includes('/tr')) {
+      var removeButton = $("<button>").addClass("btn btn-danger btn-sm ml-2 remove-item").text("Kaldır");
+    }else{
+      var removeButton = $("<button>").addClass("btn btn-danger btn-sm ml-2 remove-item").text("Remove");
+
+    }
+    
     cartItem.append(removeButton);
     // Add the cart item to the cart
     $("#cart-items").append(cartItem);
@@ -32,7 +39,7 @@ $(document).ready(function() {
     var totalPriceElement = $('.total-price');
     var currentTotal = Number(totalPriceElement.text().replace(/[^0-9.-]+/g,"")); // Removes "Total: $" and formats as Number
     var newTotal = currentTotal - itemPrice;
-    totalPriceElement.text('Total: $' + newTotal.toFixed(2));
+    totalPriceElement.text('Total:' + newTotal.toFixed(2));
 
     // Remove the cart item from the cart
     $(this).closest("li").remove();
