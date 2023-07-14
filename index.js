@@ -18,11 +18,11 @@ app.use(express.static("public"));
 
 
   
-app.get('/', (req, res) => {
+app.get('/en', (req, res) => {
   res.render('index_en');
 });
 
-app.get('/tr', (req, res) => {
+app.get('/', (req, res) => {
   res.render('index_tr');
 });
 

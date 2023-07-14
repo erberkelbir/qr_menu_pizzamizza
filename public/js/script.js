@@ -48,10 +48,19 @@ $(document).ready(function() {
   // Place Order button click event
   $("#place-order").on("click", function() {
     // Replace the phone number with your actual WhatsApp number
-    var phoneNumber = "+905383213410";
+    var phoneNumber = "+905309774534";
     
     // Initialize the message
-    var message = "Hello, I want to order:%0D%0A\n";
+    const currentURL = window.location.href;
+    var message;
+    if (currentURL.includes('/tr')) {
+      message = "Merhaba,gel-al sipariş vermek istiyorum:%0D%0A\n";
+
+    }
+    else {
+      message = "Hello, I want to  take away order:%0D%0A\n";
+    }
+     
     var pizzaList = {};
   
     // Iterate over the cart items
