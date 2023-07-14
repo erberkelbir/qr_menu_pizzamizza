@@ -53,12 +53,14 @@ $(document).ready(function() {
     // Initialize the message
     const currentURL = window.location.href;
     var message;
-    if (currentURL.includes('/tr')) {
-      message = "Merhaba,gel-al sipariş vermek istiyorum:%0D%0A\n";
+    if (currentURL.includes('/en')) {
+      message = "Hello, I want to  take away order:%0D%0A\n";
+
 
     }
     else {
-      message = "Hello, I want to  take away order:%0D%0A\n";
+      message = "Merhaba,gel-al sipariş vermek istiyorum:%0D%0A\n";
+
     }
      
     var pizzaList = {};
@@ -93,7 +95,7 @@ $(document).ready(function() {
       window.location.href = '/';
     } else {
       // Redirect to the Turkish version
-      window.location.href = '/tr';
+      window.location.href = '/en';
     }
   });
 
