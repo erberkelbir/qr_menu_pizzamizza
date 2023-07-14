@@ -9,6 +9,21 @@
 body {
   font-family: 'Amatic SC', cursive;
   background-color: #FBEFCE;
+
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInSlideUp 2s ease-out forwards;
+}
+
+@keyframes fadeInSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 .card-title{
   font-size: 2.3rem;
@@ -62,11 +77,19 @@ header {
 
 /* Add animation to the cards */
 .card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   padding: 3% 5%;
   text-align: center;
+  justify-content: space-evenly;
   background-color: transparent;
   transition: transform 0.3s ease-in-out;
   border-radius: 20px;
+}
+.card-body{
+  flex : 1 0 auto;
+
 }
 
 .card:hover {
@@ -86,6 +109,7 @@ header {
   font-weight: normal;
   text-transform: uppercase;
   cursor: pointer;
+  font-size: 18px;
 }
 
 .buton:hover {
@@ -125,6 +149,7 @@ header {
   border-radius: 10px;
   background-color: #ffffff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 90px;
 }
 
 /* Style the cart items */
@@ -139,7 +164,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
+  font-size: 25px;
   margin-bottom: 10px;
   padding: 10px;
   background-color: #fff;
@@ -148,34 +173,32 @@ header {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
 }
+.cart .mb-4{
+  font-size: 42px;
+  font-weight: 800;
+}
 
 /* Style the "Place Order" button */
 #place-order {
   display: block;
   width: 100%;
   padding: 10px;
-  background-color: #dc3545;
+  background-color: #832f38;
   color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  font-size: 30px;
 }
 
 #place-order:hover {
-  background-color: #c82333;
+  background-color: #b86767;
 }
 
 #place-order:active {
+  
   transform: scale(0.95);
-}
-.footer-logo{
-  margin: 3% 1%;
-}
-.footer{
-  padding-top: 30px;
-  margin-top: 3%;
-  text-align: center;
 }
 
 .total-price{
@@ -198,3 +221,150 @@ header {
   100% { transform: rotate(360deg) scale(1); }
 }
 
+
+.logo-img{
+  width: 200PX;
+  height: 200px;
+  
+}
+.footer-distributed {
+  font-family: 'montserrat', Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: #a7a09c;
+
+  color: #000000;
+}
+.footer-location span p {
+  color: #000;
+}
+.footer-left-middle,
+.footer-right-middle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+.footer-social-icons{
+  margin: 3% 5%;
+  padding: 3% 5%;
+  
+}
+.footer-social-icons a i {
+  color: #000;
+  font-size: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+  
+}
+.footer-social-icons a i:hover {
+  color: #f5f4f4;
+  animation-duration: 5s;
+  transform: scale(1.2);
+}
+.footer-social-icons a i:active {
+  color: #f5f4f4;
+  animation-duration: 5s;
+  transform: scale(0.90);
+}
+.logo-img,
+
+.footer-location{
+  font-family:  sans-serif;
+  font-size: 18px;
+  display: flex;
+  flex-direction: row;
+  min-width: none;
+  color: #fff;
+  justify-content: space-around;
+
+}
+.footer-location a {
+  color: #000;
+  transition: transform 0.3s ease;
+}
+
+.footer-location a:visited {
+  color: #808080;
+}
+
+.footer-location a:hover,
+.footer-location a:focus,
+.footer-location a:active {
+  transform: scale(0.90);
+}
+.footer-location span p {
+  margin-left: 10px;
+}
+
+
+.footer-company-name {
+  order: 2;
+}
+
+
+
+.footer-icons a {
+  padding: 0 10px;
+}
+
+.footer-icons i {
+  font-size: 24px; 
+  color: black;/* Adjust this value to increase/decrease the size of the icons */
+}
+.footer-icons i:hover {
+  color: #f5f4f4;
+  animation-duration: 5s;
+  transform: scale(1.2);
+}
+.footer-icons i:active {
+  color: #f5f4f4;
+  animation-duration: 5s;
+  transform: scale(0.90);
+}
+
+.footer-bottom {
+  font-family:  sans-serif;
+  width: 100%;
+  background-color: rgb(177, 176, 176);
+  justify-content: center;
+  align-items: center;
+  color: #000000;
+  text-align: center;
+  font-size: 12px;
+  padding: 20px;
+}
+.footer-bottom h6{
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: #000000;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .footer-distributed {
+    flex-direction: column;
+  }
+
+  .footer-left-middle,
+  .footer-right-middle {
+    margin: 20px 0;
+  }
+
+  .logo-img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-img {
+    width: 100px;
+    height: 100px;
+  }
+}
