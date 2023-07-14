@@ -6,6 +6,8 @@
   <title>Pizza Shop Menu</title>
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
   <script src="https://kit.fontawesome.com/807cd7a84e.js" crossorigin="anonymous"></script>
 
 
@@ -20,50 +22,52 @@
 
   <main class="py-5">
     <div class="container">
+        <button id="translateButton">Translate to EN</button>
+
       <section class="mb-5 section-border">
-        <h2 class="mb-4">Pizzas</h2>
+        <h2 class="mb-4 pizza-text">PİZZALAR</h2>
         <div class="row">
           <div class="col-md-6 col-lg-4 my-3">
             <div class="card">
-              <img src="/assets/pizza.png" alt="3 Cheese Pizza" class="card-img-top">
+              <img src="/assets/3_cheesy.png" alt="3 Cheese Pizza" class="card-img-top">
               <div class="card-body">
-                <h3 class="card-title">3 Cheese</h3>
-                <p class="card-text">Ingredients: Cheese 1, Cheese 2, Cheese 3</p>
-                <p class="card-text">Price: $9.99</p>
-                <button class="buton">Add to Cart</button>
+                <h3 class="card-title">3 CHEESY</h3>
+                <p class="card-text">İçindekiler: Dil peyniri, Çörek otlu beyaz peynir, Kolot</p>
+                <p class="card-text">Fiyat: &#x20BA; 180</p>
+                <button class="buton">Sepete Ekle</button>
               </div>
             </div>
           </div>
           <div class="col-md-6 col-lg-4 my-3">
             <div class="card">
-              <img src="/assets/pizza.png" alt="Pepperoni Pizza" class="card-img-top">
+              <img src="/assets/MAGMA.png" alt="Pepperoni Pizza" class="card-img-top">
               <div class="card-body">
-                <h3 class="card-title">Pepperoni</h3>
-                <p class="card-text">Ingredients: Pepperoni, Cheese</p>
-                <p class="card-text">Price: $11.99</p>
-                <button class="buton">Add to Cart</button>
+                <h3 class="card-title">MAGMA</h3>
+                <p class="card-text">İçindekiler: Kolot, Dil peyniri, İstiridye mantarı, Kasap sucuk, Maldon tuzu</p>
+                <p class="card-text">Fiyat: &#x20BA; 200</p>
+                <button class="buton">Sepete Ekle</button>
               </div>
             </div>
           </div>
           <div class="col-md-6 col-lg-4 my-3">
             <div class="card">
-              <img src="/assets/pizza.png" alt="Barbecue Chicken Pizza" class="card-img-top">
+              <img src="/assets/LUNA.png" alt="Barbecue Chicken Pizza" class="card-img-top">
               <div class="card-body">
-                <h3 class="card-title">Barbecue Chicken</h3>
-                <p class="card-text">Ingredients: Chicken, Barbecue sauce, Cheese</p>
-                <p class="card-text">Price: $14.99</p>
-                <button class="buton">Add to Cart</button>
+                <h3 class="card-title">LUNA</h3>
+                <p class="card-text">İçindekiler: Dil peyniri, Kolot, İstiridye mantarı, Maldon tuzu</p>
+                <p class="card-text">Fiyat: &#x20BA; 190</p>
+                <button class="buton">Sepete Ekle</button>
               </div>
             </div>
           </div>
           <div class="col-md-6 col-lg-4 my-3">
             <div class="card">
-              <img src="/assets/pizza.png" alt="Margarita Pizza" class="card-img-top">
+              <img src="/assets/margarita.png" alt="Margarita Pizza" class="card-img-top">
               <div class="card-body">
                 <h3 class="card-title">Margarita</h3>
-                <p class="card-text">Ingredients: Cheese, Tomatoes, Basil</p>
-                <p class="card-text">Price: $12.99</p>
-                <button class="buton">Add to Cart</button>
+                <p class="card-text">İçindekiler: Fesleğen, Mozarella, Tel Peynir, Eski kaşar, Domates</p>
+                <p class="card-text">Fiyat: &#x20BA; 170</p>
+                <button class="buton">Sepete Ekle</button>
               </div>
             </div>
           </div>
@@ -71,10 +75,10 @@
       </section>
 
       <div class="cart sticky-top">
-        <h2 class="mb-4">Cart</h2>
+        <h2 class="mb-4">Sepet</h2>
         <ul id="cart-items" class="order-lg-first"></ul>
         <div class="total-price">Total: $0.00</div>
-        <button id="place-order" class="btn btn-danger">Place Order</button>
+        <button id="place-order" class="btn btn-danger">Gel Al!</button>
     </div>
     </div>
     <footer class="footer">
@@ -82,7 +86,7 @@
       <i class="footer-logo fa-brands fa-facebook-f"></i>
       <i class="footer-logo fa-brands fa-instagram"></i>
       <i class="footer-logo fa-solid fa-envelope"></i>
-      <p>© Copyright 2023 3RB</p>
+      <p>© Hakları Saklıdır 2023 3RB</p>
   
     </footer>
   </main>

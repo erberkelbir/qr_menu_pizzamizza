@@ -69,4 +69,16 @@ $(document).ready(function() {
     window.location.href = "https://wa.me/" + phoneNumber + "?text=" + message;
   });
 
+  document.getElementById('translateButton').addEventListener('click', function() {
+    const currentURL = window.location.href;
+    
+    if (currentURL.includes('/tr')) {
+      // Redirect to the English version
+      window.location.href = '/';
+    } else {
+      // Redirect to the Turkish version
+      window.location.href = '/tr';
+    }
+  });
+
 });
