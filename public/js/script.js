@@ -90,7 +90,7 @@ $(document).ready(function() {
   document.getElementById('translateButton').addEventListener('click', function() {
     const currentURL = window.location.href;
     
-    if (currentURL.includes('/tr')) {
+    if (currentURL.includes('/en')) {
       // Redirect to the English version
       window.location.href = '/';
     } else {
