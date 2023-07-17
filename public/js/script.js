@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  var notificationBadge = document.getElementById('cart-notif');
 
   // Add to Cart button click event
   $(".buton").on("click", function() {
@@ -27,6 +28,8 @@ $(document).ready(function() {
     cartItem.append(removeButton);
     // Add the cart item to the cart
     $("#cart-items").append(cartItem);
+    notificationBadge.textContent = parseInt(notificationBadge.textContent) + 1;
+
 });
 
   // Remove button click event
@@ -43,6 +46,8 @@ $(document).ready(function() {
 
     // Remove the cart item from the cart
     $(this).closest("li").remove();
+    notificationBadge.textContent = parseInt(notificationBadge.textContent) - 1;
+
 });
 
   // Place Order button click event
@@ -98,5 +103,10 @@ $(document).ready(function() {
       window.location.href = '/en';
     }
   });
+
+
+
+ 
+  
 
 });
