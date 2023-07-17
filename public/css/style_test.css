@@ -285,19 +285,19 @@ header {
   padding: 3% 5%;
   
 }
-.footer-social-icons a i {
+.footer-social-icons a svg {
   color: #000;
   font-size: 30px;
   margin-left: 10px;
   margin-right: 10px;
   
 }
-.footer-social-icons a i:hover {
+.footer-social-icons a svg:hover {
   color: #f5f4f4;
   animation-duration: 5s;
   transform: scale(1.2);
 }
-.footer-social-icons a i:active {
+.footer-social-icons a svg:active {
   color: #f5f4f4;
   animation-duration: 5s;
   transform: scale(0.90);
@@ -343,16 +343,16 @@ header {
   padding: 0 10px;
 }
 
-.footer-icons i {
+.footer-icons svg {
   font-size: 24px; 
   color: black;/* Adjust this value to increase/decrease the size of the icons */
 }
-.footer-icons i:hover {
+.footer-icons svg:hover {
   color: #f5f4f4;
   animation-duration: 5s;
   transform: scale(1.2);
 }
-.footer-icons i:active {
+.footer-icons svg:active {
   color: #f5f4f4;
   animation-duration: 5s;
   transform: scale(0.90);
@@ -409,7 +409,7 @@ header {
 }
 .notification {
   position: relative;
-  margin-left: -10px;
+  margin-left: -0px;
   margin-top: -15px;
   font-family: 'Montserrat', sans-serif;
   font-size: 20px;
